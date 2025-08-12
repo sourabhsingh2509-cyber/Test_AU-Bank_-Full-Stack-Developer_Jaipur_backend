@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "10b4a6a7-fb53-4121-89d9-8efec4b69045",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15760238",
+		"_collection_link": "https://speeding-spaceship-656043.postman.co/workspace/Wolero-Driver-APIs~11a8b086-2294-418e-805a-f93e3835479e/collection/15760238-10b4a6a7-fb53-4121-89d9-8efec4b69045?action=share&source=collection_link&creator=15760238"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/v1/sales/states",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/states",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"states"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/sales/states-max-min-date/Florida",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/states-max-min-date/Florida",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"states-max-min-date",
+						"Florida"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/sales/getDashboardData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":\"CG-12520\",\r\n    \"state\":\"Kentucky\",\r\n    \"startDate\":\"2014-01-21\",\r\n    \"endDate\":\"2017-12-25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/getDashboardData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"getDashboardData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
