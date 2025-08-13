@@ -36,12 +36,23 @@ exports.getMaxMinDates = (req, res) => {
         const minDate = new Date(Math.min(...dates));
         const maxDate = new Date(Math.max(...dates));
 
+        const datesLoop = [
+        ...new Set(
+            stateOrders.map(item =>
+            new Date(item["Order Date"])
+                .toISOString()
+                .split("T")[0] // get YYYY-MM-DD
+            )
+        )
+        ];
+
         return res.status(200).json({
             status: 200,
             message: "Max Min date fetched successfully",
             data: {
                 minDate: minDate.toISOString().split("T")[0],
-                maxDate: maxDate.toISOString().split("T")[0]
+                maxDate: maxDate.toISOString().split("T")[0],
+                dates : datesLoop
             }
         });
     }catch(error){
